@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+file = open("/data/ENV-Django/global/mysql.txt")
+mysql = eval(file.read())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%1_ac5^f^)!+v6k2p8v(yel7@9ix641zm^(6sm#o&t&=oqnq^k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -75,16 +76,8 @@ WSGI_APPLICATION = 'KingCode2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        'NAME': 'kingcode',                     # 你要存储数据的库名，事先要创建之
-        'USER': 'root',                         # 数据库用户名
-        'PASSWORD': 'root<>JeffyLi123',         # 密码
-        'HOST': 'localhost',                    # 主机
-        'PORT': '3306',                         # 数据库使用的端口
-    }
-}
+DATABASES = {}
+DATABASES['default']=mysql
 
 
 # Password validation
