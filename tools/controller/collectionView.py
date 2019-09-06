@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def collection(request):
+def collection_html(request):
     context = {
         "data":[
             {"title": "常用网站", "id": "collapse1", "collapses": [
