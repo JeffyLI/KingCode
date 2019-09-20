@@ -60,6 +60,15 @@
 
                                 <b class="arrow"></b>
                             </li>
+							
+							<li id="notebook" class="">
+                                <a onclick="clickMenu('notebook','notebook')">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    <span class="menu-text"> Notebook </span>
+						        </a>
+
+                                <b class="arrow"></b>
+                            </li>
                         </ul>
                     </li>
 
@@ -105,15 +114,23 @@
     <script src="{%  static "assets/js/ace-elements.min.js" %}"></script>
     <script src="{%  static "assets/js/ace.min.js" %}"></script>
     <script>
+	var listId;
         function init(){
             var height=$(window).height();
-            $("#sub_page").height(height*0.9)
+            $("#sub_page").height(height*0.9);
+	    listId=['collection','notebook','face_recognition'];
         }
 
         init();
         function clickMenu(elementid,url){
-            $("#"+elementid).addClass("active");
-            $("#sub_page",parent.document.body).attr("src","/tools/"+url)
+	    for(tempId in listId){
+		if(listId[tempId] == elementid){
+		    $("#"+elementid).addClass("active");
+		    $("#sub_page",parent.document.body).attr("src","/tools/"+url);
+		}else{
+  		    $("#"+listId[tempId]).removeClass("active");
+		}
+	    }
         }
     </script>
 </html>
