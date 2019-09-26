@@ -1,0 +1,16 @@
+<!CTYPE html>
+<html lang="zh">
+    <head>
+		{% load static %}
+        <meta charset="utf-8" />
+        <title>Notebook</title>
+        <link rel="stylesheet" href="{% static "assets/css/ace.min.css" %}" class="ace-main-stylesheet" id="main-ace-style" />
+        <link rel="stylesheet" href="{% static "/editor.md-master/examples/css/style.css" %}" />
+        <link rel="stylesheet" href="{% static "/editor.md-master/css/editormd.css" %}" />
+    </head>
+    <body>
+        notebook list
+        <button onclick="window.location='/tools/notebook/edit'" >Edit</button>
+    </body>
+</html>
+

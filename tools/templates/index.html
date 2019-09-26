@@ -74,7 +74,7 @@
 
                     <li class="open">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-briefcase"></i>
+							<i class="menu-icon fa fa-eye"></i>
 							<span class="menu-text"> Computer Vision </span>
 
                             <b class="arrow fa fa-angle-down"></b>
@@ -102,7 +102,7 @@
 
             <div class="main-content">
                 <div class="main-content-inner">
-                    <iframe id="sub_page" src="https://cn.bing.com/" width="100%" frameborder="0"></iframe>
+                    <iframe id="sub_page" src="/tools/collection" width="100%" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -123,14 +123,14 @@
 
         init();
         function clickMenu(elementid,url){
-	    for(tempId in listId){
-		if(listId[tempId] == elementid){
-		    $("#"+elementid).addClass("active");
-		    $("#sub_page",parent.document.body).attr("src","/tools/"+url);
-		}else{
-  		    $("#"+listId[tempId]).removeClass("active");
-		}
-	    }
+            for(tempId in listId){
+                if(listId[tempId] == elementid){
+                    $("#"+elementid).addClass("active");
+                    $("#sub_page",parent.document.body).attr("src","/tools/"+url);
+                }else{
+                    $("#"+listId[tempId]).removeClass("active");
+                }
+            }
         }
     </script>
 </html>
