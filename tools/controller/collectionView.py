@@ -24,6 +24,10 @@ def collection_html(request):
                     {"name": "E书联盟", "href":"https://book118.com/"},
                     {"name": "搜索引擎汇总", "href":"https://ebook.chongbuluo.com/"},
              ]},
+            {"title": "工作空间", "id": "collapse4", "collapses": [
+                {"name": "小虫象棋", "href": "https://www.xqbase.com/"},
+                {"name": "Alpha实践", "href": "https://zhuanlan.zhihu.com/p/34433581"},
+            ]},
             {"title": "菜单栏", "id": "collapse_menu", "collapses": [
                 {"name": "Notebook", "href": "/tools/notebook"},
                 {"name": "Face Recognition", "href": "/tools/face_recognition"},
